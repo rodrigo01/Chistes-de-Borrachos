@@ -8,6 +8,7 @@
         ProtonDigital Team
     </author>
     <content src="index.html" />
+    <gap:plugin name="cordova-plugin-admob" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
