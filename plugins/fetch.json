@@ -1,31 +1,11 @@
 {
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-admobpro": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-whitelist@1"
+            "id": "cordova-plugin-admobpro@2.29.29"
         },
         "is_top_level": true,
         "variables": {}
-    },
-    "phonegap-plugin-push": {
-        "source": {
-            "type": "registry",
-            "id": "phonegap-plugin-push@2.0.0"
-        },
-        "is_top_level": true,
-        "variables": {
-            "FCM_VERSION": "15.0.0"
-        }
-    },
-    "cordova-plugin-admobpro-firebase": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-admobpro-firebase@^2.35.4"
-        },
-        "is_top_level": true,
-        "variables": {
-            "PLAY_SERVICES_VERSION": "16.0.0"
-        }
     },
     "cordova-plugin-extension": {
         "source": {
@@ -33,14 +13,6 @@
             "id": "cordova-plugin-extension"
         },
         "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-support-google-services": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-support-google-services"
-        },
-        "is_top_level": true,
         "variables": {}
     }
 }

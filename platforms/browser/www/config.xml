@@ -8,7 +8,6 @@
         ProtonDigital Team
     </author>
     <content src="index.html" />
-    <gap:plugin name="cordova-plugin-admob-free" source="npm" spec="0.20.00" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -16,5 +15,4 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="phonegap-version" value="cli-7.1.0" />
 </widget>
