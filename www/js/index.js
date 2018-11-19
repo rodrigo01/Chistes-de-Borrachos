@@ -17,15 +17,6 @@
  * under the License.
  */
 var app = {
-    autoShowInterstitial: false,
-    progressDialog: document.getElementById("progressDialog"),
-    spinner: document.getElementById("spinner"),
-    weinre: {
-        enabled: false,
-        ip: '', // ex. http://192.168.1.13
-        port: '', // ex. 9090
-        targetApp: '' // ex. see weinre docs
-    },
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
