@@ -27,5 +27,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-ad-admob" spec="1.0.112" />
+    <plugin name="cordova-plugin-ad-admob" />
 </widget>
