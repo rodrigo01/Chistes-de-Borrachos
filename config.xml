@@ -9,7 +9,6 @@
     </author>
     <preference name="phonegap-version" value="cli-7.1.0" />
     <content src="index.html" />
-    <plugin name="cordova-support-google-services" source="npm" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="phonegap-plugin-push" source="npm" spec="2.0.0">
         <variable name="FCM_VERSION" value="15.0.0" />
