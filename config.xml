@@ -11,7 +11,6 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    <gap:plugin name="com-admob-plugin" source="npm"/>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
