@@ -12,6 +12,12 @@
         },
         "cordova-plugin-admobpro-firebase": {
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        },
+        "cordova-support-google-services": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
     "dependent_plugins": {},
@@ -27,6 +33,8 @@
     ],
     "plugin_metadata": {
         "cordova-plugin-extension": "1.5.4",
-        "cordova-plugin-admobpro-firebase": "2.35.4"
+        "cordova-plugin-admobpro-firebase": "2.35.4",
+        "cordova-plugin-whitelist": "1.3.3",
+        "cordova-support-google-services": "1.2.1"
     }
 }

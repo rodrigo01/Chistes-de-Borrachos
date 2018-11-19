@@ -13,6 +13,9 @@
         "cordova-plugin-admobpro-firebase": {
             "PLAY_SERVICES_VERSION": "15.0.0",
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        },
+        "cordova-support-google-services": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
     "dependent_plugins": {

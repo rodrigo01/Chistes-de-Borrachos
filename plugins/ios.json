@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        },
+        "cordova-support-google-services": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
     "dependent_plugins": {
