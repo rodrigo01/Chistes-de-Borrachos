@@ -7,16 +7,9 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-admobpro-firebase": {
-            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
-        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
-        }
-    }
+    "dependent_plugins": {}
 }

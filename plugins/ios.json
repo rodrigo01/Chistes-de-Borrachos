@@ -11,9 +11,5 @@
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-extension": {
-            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
-        }
-    }
+    "dependent_plugins": {}
 }
