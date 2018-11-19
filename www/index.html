@@ -97,9 +97,16 @@
 
     <script type="text/javascript">
 
+        $(document).on('pageinit', "#resultados", function() {
+              $('#resultados').append('Iniciamos<br>');
+        });
+
     $( document ).ready(function() {
 
-        $('#resultados').append('Iniciamos<br>');
+        $(document).on('pageinit', "#resultados",function() {
+              $('#resultados').append('Iniciamos2<br>');
+        });
+
 
         function initHome(){
             $('#resultados').append('desaparecimos<br>');
