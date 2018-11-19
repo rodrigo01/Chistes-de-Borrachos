@@ -30,12 +30,12 @@ var app = {
         this.receivedEvent('deviceready');
 
         // Set AdMobAds options:
-        admob.setOptions({
+        /*admob.setOptions({
             publisherId:          "ca-app-pub-9562640839848792/6622809054",  // Required
             tappxShare:           0                                        // Optional
         });
         admob.createBannerView();
-        admob.showBannerAd(true);
+        admob.showBannerAd(true);*/
     },
 
     // Update DOM on a Received Event
