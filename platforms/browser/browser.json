@@ -1,0 +1,32 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        },
+        "cordova-plugin-admobpro-firebase": {
+            "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-admobpro-firebase/www/AdMob.js",
+            "id": "cordova-plugin-admobpro-firebase.AdMob",
+            "pluginId": "cordova-plugin-admobpro-firebase",
+            "clobbers": [
+                "window.AdMob"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-extension": "1.5.4",
+        "cordova-plugin-admobpro-firebase": "2.35.4"
+    }
+}
