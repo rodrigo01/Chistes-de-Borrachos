@@ -8,8 +8,7 @@
         ProtonDigital Team
     </author>
     <content src="index.html" />
-    <preference name="android-build-tool" value="gradle" /> 
-    <gap:plugin name="com-admob-plugin" version="5.3.1" source="npm"/>
+    <gap:plugin name="com-admob-plugin"  source="npm"/>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
