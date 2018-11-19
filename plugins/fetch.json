@@ -20,11 +20,11 @@
     "cordova-plugin-admobpro-firebase": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-admobpro-firebase"
+            "id": "cordova-plugin-admobpro-firebase@^2.35.4"
         },
         "is_top_level": true,
         "variables": {
-            "PLAY_SERVICES_VERSION": "15.0.0"
+            "PLAY_SERVICES_VERSION": "16.0.0"
         }
     },
     "cordova-plugin-extension": {

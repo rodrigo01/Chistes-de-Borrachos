@@ -12,10 +12,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "cordova-support-google-services": "1.2.1",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-extension": "1.5.4",
-  "cordova-plugin-admobpro-firebase": "2.35.4",
-  "cordova-support-google-services": "1.2.1"
+  "cordova-plugin-admobpro-firebase": "2.35.4"
 };
 // BOTTOM OF METADATA
 });

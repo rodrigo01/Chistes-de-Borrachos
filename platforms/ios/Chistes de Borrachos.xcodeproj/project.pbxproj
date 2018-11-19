@@ -327,6 +327,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Chistes de Borrachos/Plugins/cordova-plugin-extension\"",
+					"\"$(SRCROOT)/Chistes de Borrachos/Plugins/cordova-plugin-extension\"",
 				);
 			};
 			name = Debug;
@@ -352,6 +353,7 @@
 				PRODUCT_NAME = "Chistes de Borrachos";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/Chistes de Borrachos/Plugins/cordova-plugin-extension\"",
 					"\"$(SRCROOT)/Chistes de Borrachos/Plugins/cordova-plugin-extension\"",
 				);
 			};

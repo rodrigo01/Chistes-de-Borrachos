@@ -92,8 +92,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "cordova-plugin-extension/chistesborrachos-rjfun-libs.gradle"
 apply from: "cordova-support-google-services/chistesborrachos-build.gradle"
+apply from: "cordova-plugin-extension/chistesborrachos-rjfun-libs.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

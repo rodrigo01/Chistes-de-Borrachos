@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "cordova-support-google-services": {
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         },
-        "cordova-support-google-services": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.cronpixel.chistesborrachos"
         }
     },
