@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.cronpixel.chistesborrachos" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Chistes de Borrachos</name>
+    <description>
+        Los mejores chistes de borrachos
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        ProtonDigital Team
+    </author>
+    <preference name="phonegap-version" value="cli-7.1.0" />
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <plugin name="phonegap-plugin-push" spec="~2.1.0">
+        <variable name="FCM_VERSION" value="15.0.0" />
+    </plugin>
+    <plugin name="cordova-plugin-admobpro-firebase" source="npm">
+        <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
+    </plugin>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="15"/>
+        <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <engine name="android" spec="~6.3.0" />
+    <engine name="ios" spec="~4.4.0" />
+</widget>
