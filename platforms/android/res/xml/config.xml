@@ -26,6 +26,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <resource-file src="google-services.json" target="app/google-services.json" />
+    <resource-file src="google-services.json" target="google-services.json" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="phonegap-version" value="cli-7.1.0" />
     <preference name="android-build-tool" value="gradle" />
