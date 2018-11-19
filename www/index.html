@@ -93,7 +93,7 @@
 
     <script type="text/javascript">
         $('#resultados').append('Iniciamos<br>');
-        
+
         function initHome(){
             $('#resultados').append('desaparecimos<br>');
             $('.screen').css('display','none');
@@ -116,7 +116,49 @@
                         rchiste = rchiste.replace('##Nombre##',json[i].title);
                         $('.listado-chistes').append(rchiste);
                     }
-                }
+                },
+
+                error: function(jqXHR, textStatus, errorThrown) {
+                    //alert('An error occurred... Look at the console (F12 or Ctrl+Shift+I, Console tab) for more information!');
+
+                    $('#resultados').append('<p>status code: '+jqXHR.status+'</p><p>errorThrown: ' + errorThrown + '</p><p>jqXHR.responseText:</p><div>'+jqXHR.responseText + '</div>');
+                    console.log('jqXHR:');
+                    console.log(jqXHR);
+                    console.log('textStatus:');
+                    console.log(textStatus);
+                    console.log('errorThrown:');
+                    console.log(errorThrown);
+
+                     if (jqXHR.status === 0) {
+
+                        $('#resultados').append('Not connect: Verify Network.');
+
+                      } else if (jqXHR.status == 404) {
+
+                        $('#resultados').append('Requested page not found [404]');
+
+                      } else if (jqXHR.status == 500) {
+
+                        $('#resultados').append('Internal Server Error [500].');
+
+                      } else if (textStatus === 'parsererror') {
+
+                        $('#resultados').append('Requested JSON parse failed.');
+
+                      } else if (textStatus === 'timeout') {
+
+                        $('#resultados').append('Time out error.');
+
+                      } else if (textStatus === 'abort') {
+
+                        $('#resultados').append('Ajax request aborted.');
+
+                      } else {
+
+                        $('#resultados').append('Uncaught Error: ' + jqXHR.responseText);
+
+                      }
+                },
             });
         }
 
@@ -149,40 +191,50 @@
 
                     $('.screen').css('display','none');
                     $('#chiste-screen').css('display','initial');
-                }
+                },
+
+                error: function(jqXHR, textStatus, errorThrown) {
+                    //alert('An error occurred... Look at the console (F12 or Ctrl+Shift+I, Console tab) for more information!');
+
+                    $('#resultados').append('<p>status code: '+jqXHR.status+'</p><p>errorThrown: ' + errorThrown + '</p><p>jqXHR.responseText:</p><div>'+jqXHR.responseText + '</div>');
+                    console.log('jqXHR:');
+                    console.log(jqXHR);
+                    console.log('textStatus:');
+                    console.log(textStatus);
+                    console.log('errorThrown:');
+                    console.log(errorThrown);
+
+                     if (jqXHR.status === 0) {
+
+                        $('#resultados').append('Not connect: Verify Network.');
+
+                      } else if (jqXHR.status == 404) {
+
+                        $('#resultados').append('Requested page not found [404]');
+
+                      } else if (jqXHR.status == 500) {
+
+                        $('#resultados').append('Internal Server Error [500].');
+
+                      } else if (textStatus === 'parsererror') {
+
+                        $('#resultados').append('Requested JSON parse failed.');
+
+                      } else if (textStatus === 'timeout') {
+
+                        $('#resultados').append('Time out error.');
+
+                      } else if (textStatus === 'abort') {
+
+                        $('#resultados').append('Ajax request aborted.');
+
+                      } else {
+
+                        $('#resultados').append('Uncaught Error: ' + jqXHR.responseText);
+
+                      }
+                },
             });
-
-        }).fail( function( jqXHR, textStatus, errorThrown ) {
-
-          if (jqXHR.status === 0) {
-
-            $('#resultados').append('Not connect: Verify Network.');
-
-          } else if (jqXHR.status == 404) {
-
-            $('#resultados').append('Requested page not found [404]');
-
-          } else if (jqXHR.status == 500) {
-
-            $('#resultados').append('Internal Server Error [500].');
-
-          } else if (textStatus === 'parsererror') {
-
-            $('#resultados').append('Requested JSON parse failed.');
-
-          } else if (textStatus === 'timeout') {
-
-            $('#resultados').append('Time out error.');
-
-          } else if (textStatus === 'abort') {
-
-            $('#resultados').append('Ajax request aborted.');
-
-          } else {
-
-            $('#resultados').append('Uncaught Error: ' + jqXHR.responseText);
-
-          }
 
         });
 
