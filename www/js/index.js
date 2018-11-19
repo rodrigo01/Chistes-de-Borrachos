@@ -17,6 +17,15 @@
  * under the License.
  */
 var app = {
+    autoShowInterstitial: false,
+    progressDialog: document.getElementById("progressDialog"),
+    spinner: document.getElementById("spinner"),
+    weinre: {
+        enabled: false,
+        ip: '', // ex. http://192.168.1.13
+        port: '', // ex. 9090
+        targetApp: '' // ex. see weinre docs
+    },
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -29,42 +38,13 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
-        var adUnit = "ca-app-pub-9562640839848792/6622809054";
-        var adUnitFullScreen = "ca-app-pub-9562640839848792/6622809054";
-        var isOverlap = true; //true: overlap, false: split
-        var isTest = true;
-
-        if ( window.plugins && window.plugins.AdMob ) 
-        {
-            window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
-
-            //banner ad callback
-            window.admob.onBannerAdPreloaded = function() {
-                alert('onBannerAdPreloaded');
-            };
-            window.admob.onBannerAdLoaded = function() {
-                alert('onBannerAdLoaded');
-            };
-            //full screen ad callback
-            window.admob.onFullScreenAdPreloaded = function() {
-                alert('onFullScreenAdPreloaded');
-            };
-            window.admob.onFullScreenAdLoaded = function() {
-                alert('onFullScreenAdLoaded');
-            };
-            window.admob.onFullScreenAdShown = function() {
-                alert('onFullScreenAdShown');
-            };
-            window.admob.onFullScreenAdHidden = function() {
-                alert('onFullScreenAdHidden');
-            };
-
-            window.admob.preloadBannerAd();
-            window.admob.showBannerAd('bottom-center', 'SMART_BANNER');
-
-        } else {
-            //alert( 'admob plugin not ready' );
-        }
+        // Set AdMobAds options:
+        admob.setOptions({
+            publisherId:          "ca-app-pub-9562640839848792/6622809054",  // Required
+            tappxShare:           0                                        // Optional
+        });
+        admob.createBannerView();
+        admob.showBannerAd(true);
     },
 
     // Update DOM on a Received Event
