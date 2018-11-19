@@ -10,7 +10,9 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <plugin name="cordova-plugin-admobpro" source="npm" />
+    <plugin name="cordova-plugin-admobpro" source="npm">
+        <variable name="PLAY_SERVICES_VERSION" value="16.0.0" />
+    </plugin>
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
