@@ -2,7 +2,7 @@
   "name": "phonegap-plugin-push",
   "description": "Register and receive push notifications.",
   "types": "./types/index.d.ts",
-  "version": "2.1.3",
+  "version": "2.0.0",
   "homepage": "http://github.com/phonegap/phonegap-plugin-push#readme",
   "repository": {
     "type": "git",
@@ -46,16 +46,6 @@
         "cordova-ios": ">=4.4.0",
         "cordova-android": ">=6.2.1",
         "cordova": ">=7.0.0"
-      },
-      "<2.1.2": {
-        "cordova-ios": ">=4.4.0",
-        "cordova-android": ">=6.3.0",
-        "cordova": ">=7.1.0"
-      },
-      "2.1.2": {
-        "cordova-ios": ">=4.5.0",
-        "cordova-android": ">=6.3.0",
-        "cordova": ">=7.1.0"
       }
     }
   },
@@ -64,9 +54,7 @@
   "scripts": {
     "build": "babel src/js --out-dir www",
     "build:watch": "nodemon -w ./src/js -e js -x npm run build",
-    "eslint": "node node_modules/.bin/eslint src/js",
     "jasmine": "jasmine-node --color spec",
-    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "test": "npm run build && npm run jasmine"
   },
   "devDependencies": {
@@ -81,7 +69,7 @@
     "eslint-plugin-react": "^5.2.2",
     "jasmine-node": "1.14.5",
     "nodemon": "^1.9.2",
-    "pluginpub": "^0.0.9"
+    "pluginpub": "^0.0.8"
   },
   "dependencies": {
     "babel-plugin-add-header-comment": "^1.0.3",

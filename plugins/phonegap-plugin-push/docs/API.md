@@ -1,10 +1,7 @@
 # API
 
 - [.init()](#pushnotificationinitoptions)
-- [.hasPermission()](#pushnotificationhaspermissionsuccesshandler)
-- [.createChannel() - Android only](#pushnotificationcreatechannel)
-- [.deleteChannel() - Android only](#pushnotificationdeletechannel)
-- [.listChannels() - Android only](#pushnotificationlistchannels)
+- [.hasPermission() - Android & iOS only](#pushnotificationhaspermissionsuccesshandler---android--ios-only)
 - [push.on()](#pushonevent-callback)
   - [push.on('registration')](#pushonregistration-callback)
   - [push.on('notification')](#pushonnotification-callback)
@@ -102,7 +99,7 @@ Make sure that the certificate you build with matches your `fcmSandbox` value.
 ### Example
 
 ```javascript
-const push = PushNotification.init({
+var push = PushNotification.init({
 	android: {
 	},
     browser: {
@@ -117,7 +114,7 @@ const push = PushNotification.init({
 });
 ```
 
-## PushNotification.hasPermission(successHandler)
+## PushNotification.hasPermission(successHandler) - Android & iOS only
 
 Checks whether the push notification permission has been granted.
 
@@ -138,87 +135,9 @@ Parameter | Type | Description
 ### Example
 
 ```javascript
-PushNotification.hasPermission((data) => {
+PushNotification.hasPermission(function(data) {
     if (data.isEnabled) {
         console.log('isEnabled');
-    }
-});
-```
-
-## PushNotification.createChannel(successHandler, failureHandler, channel)
-
-Create a new notification channel for Android O and above.
-
-### Parameters
-
-Parameter | Type | Default | Description
---------- | ---- | ------- | -----------
-`successHandler` | `Function` | | Is called when the api successfully creates a channel.
-`failureHandler` | `Function` | | Is called when the api fails to create a channel.
-`channel` | `Object` | | The options for the channel.
-
-### Example
-
-```javascript
-PushNotification.createChannel(() => {
-  console.log('success');
-}, () => {
-  console.log('error');
-}, {
-  id: "testchannel1",
-  description: "My first test channel",
-  importance: 3
-});
-```
-
-The above will create a channel for your app. You'll need to provide the `id`, `description` and `importance` properties. The importance property goes from 1 = Lowest, 2 = Low, 3 = Normal, 4 = High and 5 = Highest.
-
-## PushNotification.deleteChannel(successHandler, failureHandler, channelId)
-
-Delete a notification channel for Android O and above.
-
-### Parameters
-
-Parameter | Type | Default | Description
---------- | ---- | ------- | -----------
-`successHandler` | `Function` | | Is called when the api successfully creates a channel.
-`failureHandler` | `Function` | | Is called when the api fails to create a channel.
-`channelId` | `String` | | The ID of the channel.
-
-### Example
-
-```javascript
-PushNotification.deleteChannel(() => {
-  console.log('success');
-}, () => {
-  console.log('error');
-}, 'testchannel1');
-```
-
-## PushNotification.listChannels(successHandler)
-
-Returns a list of currently configured channels.
-
-### Parameters
-
-Parameter | Type | Default | Description
---------- | ---- | ------- | -----------
-`successHandler` | `Function` | | Is called when the api successfully retrieves the list of channels.
-
-### Callback parameters
-
-#### `successHandler`
-
-Parameter | Type | Description
---------- | ---- | -----------
-`channels` | `JSONArrary` | List of channel objects.
-
-### Example
-
-```javascript
-PushNotification.listChannels((channels) => {
-    for(let channel of channels) {
-      console.log(`ID: ${channel.id} Description: ${channel.description}`);
     }
 });
 ```
@@ -246,7 +165,7 @@ Parameter | Type | Description
 ### Example
 
 ```javascript
-push.on('registration', (data) => {
+push.on('registration', function(data) {
   console.log(data.registrationId);
   console.log(data.registrationType);
 });
@@ -292,7 +211,7 @@ Parameter | Type | Description
 ### Example
 
 ```javascript
-push.on('notification', (data) => {
+push.on('notification', function(data) {
 	console.log(data.message);
 	console.log(data.title);
 	console.log(data.count);
@@ -315,7 +234,7 @@ Parameter | Type | Description
 ### Example
 
 ```javascript
-push.on('error', (e) => {
+push.on('error', function(e) {
 	console.log(e.message);
 });
 ```
@@ -333,7 +252,7 @@ Parameter | Type | Default | Description
 
 ### Example
 ```javascript
-const callback = (data) => { /*...*/};
+var callback = function(data){ /*...*/};
 
 //Adding handler for notification event
 push.on('notification', callback);
@@ -361,9 +280,9 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.unregister(() => {
+push.unregister(function() {
 	console.log('success');
-}, () => {
+}, function() {
 	console.log('error');
 });
 ```
@@ -383,10 +302,11 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.subscribe('my-topic', () => {
+push.subscribe('my-topic', function() {
 	console.log('success');
-}, (e) => {
-	console.log('error:', e);
+}, function(e) {
+	console.log('error:');
+	console.log(e);
 });
 ```
 ## push.unsubscribe(topic, successHandler, errorHandler)
@@ -404,10 +324,11 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.unsubscribe('my-topic', () => {
+push.unsubscribe('my-topic', function() {
 	console.log('success');
-}, (e) => {
-	console.log('error:', e);
+}, function(e) {
+	console.log('error:');
+	console.log(e);
 });
 ```
 
@@ -428,9 +349,9 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.setApplicationIconBadgeNumber(() => {
+push.setApplicationIconBadgeNumber(function() {
 	console.log('success');
-}, () => {
+}, function() {
 	console.log('error');
 }, 2);
 ```
@@ -457,9 +378,9 @@ Parameter | Type | Description
 ### Example
 
 ```javascript
-push.getApplicationIconBadgeNumber((n) => {
+push.getApplicationIconBadgeNumber(function(n) {
 	console.log('success', n);
-}, () => {
+}, function() {
 	console.log('error');
 });
 ```
@@ -479,9 +400,9 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.finish(() => {
+push.finish(function() {
 	console.log('success');
-}, () => {
+}, function() {
 	console.log('error');
 }, 'push-1');
 ```
@@ -500,9 +421,9 @@ Parameter | Type | Default | Description
 ### Example
 
 ```javascript
-push.clearAllNotifications(() => {
+push.clearAllNotifications(function() {
 	console.log('success');
-}, () => {
+}, function() {
 	console.log('error');
 });
 ```

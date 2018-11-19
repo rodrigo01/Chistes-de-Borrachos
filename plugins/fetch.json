@@ -10,7 +10,7 @@
     "phonegap-plugin-push": {
         "source": {
             "type": "registry",
-            "id": "phonegap-plugin-push@~2.1.0"
+            "id": "phonegap-plugin-push@2.0.0"
         },
         "is_top_level": true,
         "variables": {
@@ -38,7 +38,7 @@
     "cordova-support-google-services": {
         "source": {
             "type": "registry",
-            "id": "cordova-support-google-services@1"
+            "id": "cordova-support-google-services"
         },
         "is_top_level": true,
         "variables": {}
