@@ -29,19 +29,48 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
 
-        admob.setOptions({
-            publisherId:          "ca-app-pub-9562640839848792~7202636822",  // Required
-            tappxShare:           0                                        // Optional
-        });
-      
-      // Start showing banners (atomatic when autoShowBanner is set to true)
-      admob.createBannerView();
+        var adUnit = "ca-app-pub-9562640839848792/6622809054";
+        var adUnitFullScreen = "ca-app-pub-9562640839848792/6622809054";
+        var isOverlap = true; //true: overlap, false: split
+        var isTest = true;
+
+        if ( window.plugins && window.plugins.AdMob ) 
+        {
+            window.admob.setUp(adUnit, adUnitFullScreen, isOverlap, isTest);
+
+            //banner ad callback
+            window.admob.onBannerAdPreloaded = function() {
+                alert('onBannerAdPreloaded');
+            };
+            window.admob.onBannerAdLoaded = function() {
+                alert('onBannerAdLoaded');
+            };
+            //full screen ad callback
+            window.admob.onFullScreenAdPreloaded = function() {
+                alert('onFullScreenAdPreloaded');
+            };
+            window.admob.onFullScreenAdLoaded = function() {
+                alert('onFullScreenAdLoaded');
+            };
+            window.admob.onFullScreenAdShown = function() {
+                alert('onFullScreenAdShown');
+            };
+            window.admob.onFullScreenAdHidden = function() {
+                alert('onFullScreenAdHidden');
+            };
+
+            window.admob.preloadBannerAd();
+            window.admob.showBannerAd('bottom-center', 'SMART_BANNER');
+
+        } else {
+            //alert( 'admob plugin not ready' );
+        }
     },
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         console.log('Received Event: ' + id);
-        var push = PushNotification.init({
+        /*var push = PushNotification.init({
             android: {
             },
             ios: {
@@ -68,7 +97,7 @@ var app = {
             console.log(data.sound);
             console.log(data.image);
             console.log(data.additionalData);
-        });
+        });*/
     }
 };
 
