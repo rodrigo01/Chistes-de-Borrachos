@@ -218,8 +218,14 @@
                     }
 
                     $('#primero').css('display','initial');
-                }
-            });
+                },
+                
+            }).fail(function() {
+    alert( "error" );
+  })
+  .always(function() {
+    alert( "complete" );
+  });;
         }
 
         alert('por ejecutar home');
