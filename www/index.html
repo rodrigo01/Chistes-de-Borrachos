@@ -111,6 +111,19 @@
 
     <script type="text/javascript">
 
+    var stage = 'home';
+
+    function onBackKeyDown() {
+        if(stage=='home'){
+            $('.btn-prv').click();
+        }
+
+        if(stage=='chiste'){
+            $("#btn-regresar").click();
+            stage='home';
+        }
+    }
+
     var pagina = 1;
     $('.btn-nxt').click(function(){
         pagina = pagina + 1;
@@ -226,6 +239,7 @@
 
 
         $( "#principal" ).on( "click", ".chiste-row", function() {
+            stage = 'chiste';
             var rel = $(this).attr('rel');        
 
             $.ajax({
