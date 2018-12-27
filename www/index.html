@@ -163,7 +163,10 @@
 
     $('.btn-prv').click(function(){
         pagina = pagina - 1;
-
+        if(pagina<=1){
+            pagina = 1;
+        }
+        
         if(pagina==1){
             $('#primero').css('display','initial');
             $('#segundo').css('display','none');
