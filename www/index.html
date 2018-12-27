@@ -220,12 +220,14 @@
                     $('#primero').css('display','initial');
                 },
                 
-            }).fail(function() {
+            }).fail(function(jqXHR,error, errorThrown) {
     alert( "error" );
-  })
-  .always(function() {
-    alert( "complete" );
-  });;
+    if(jqXHR.status&&jqXHR.status==400){
+                    alert(jqXHR.responseText); 
+               }else{
+                   alert("Something went wrong");
+               }
+  });
         }
 
         alert('por ejecutar home');
