@@ -37,8 +37,8 @@ var app = {
         admob.createBannerView();
         admob.showBannerAd(true);
 
-        document.addEventListener("backbutton", onBackKeyDown, false)
-        
+        document.addEventListener("backbutton", onBackKeyDown, false)1
+
     },
 
     // Update DOM on a Received Event

@@ -1,3 +1,4 @@
+/*Base Style*/
 .navbar{
     background-color: #8eb59c;
     margin-bottom: 0px;
@@ -41,10 +42,10 @@
     font-size: 20px;
     font-weight: bold;
     padding: 7px;
-    background-color: #18bd4b;
+    background-color: #8db49c;
     display: block;
     color: #FFF;
-    border: 1px solid #017d27;
+    border: 1px solid #8db49c;
 }
 
 .chiste-show-content{
@@ -66,3 +67,26 @@
     text-decoration: none;
 }
 
+/*
+Custom Colors
+*/
+
+.navbar{
+    background-color: #8eb59c;
+}
+
+.chiste-row{
+    border-bottom: 1px solid #e0e0e0;
+    color: #7a8591;
+}
+
+.chiste-show-title{
+    background-color: #8db49c;
+    color: #FFF;
+    border: 1px solid #8db49c;
+}
+
+.btn-cst{
+    background-color: #8eb59d;
+    color: #FFF;
+}

@@ -8,7 +8,7 @@
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <script src="js/jquery-1.8.2.min.js"></script>
+        <script src="js/jquery-1.9.1.js"></script>
 
         <title>Hello World</title>
     </head>
@@ -79,7 +79,7 @@
             
             <div id="chiste-controls">
                 <div>
-                    <a href="#" id="btn-regresar" class="btn btn-success">&lt;&lt; Regresar</a>
+                    <a href="#" id="btn-regresar" class="btn-cst">&lt;&lt; Regresar</a>
                 </div>
             </div>
             
@@ -93,7 +93,7 @@
 
     <div id="chiste-show-tpl" style="display: none;">
         <span id="chiste-show-img"></span>
-        <span class="chiste-show-title">##Titulo###</span>
+        <span class="chiste-show-title">##Titulo##</span>
         <div class="chiste-show-content">##Chiste##</div>
     </div>
 
@@ -166,7 +166,7 @@
         if(pagina<=1){
             pagina = 1;
         }
-        
+
         if(pagina==1){
             $('#primero').css('display','initial');
             $('#segundo').css('display','none');
