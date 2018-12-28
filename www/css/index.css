@@ -48,6 +48,16 @@
     border: 1px solid #8db49c;
 }
 
+.chiste-tools{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px;
+    background-color: #8db49c;
+    display: block;
+    color: #FFF;
+    border: 1px solid #8db49c;
+}
+
 .chiste-show-content{
     padding: 10px;
 }
@@ -89,4 +99,10 @@ Custom Colors
 .btn-cst{
     background-color: #8eb59d;
     color: #FFF;
+}
+
+.chiste-tools{
+    background-color: #8db49c;
+    color: #FFF;
+    border: 1px solid #8db49c;
 }
