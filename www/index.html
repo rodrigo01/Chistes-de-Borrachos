@@ -111,6 +111,10 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
+
+        var shr_titulo = "";
+        var shr_mensaje = "";
+
     function fbShare(){
         window.plugins.socialsharing.shareViaFacebook(
             'Message via Facebook', 
@@ -147,7 +151,7 @@
 
     function btnCompartir(){
         //window.plugins.socialsharing.share(mensaje+' - Más Chistes en la APP', titulo, 'http://www.cronpixel.com/webapp/wp-content/uploads/2019/01/header-app.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
-        window.plugins.socialsharing.share(' - Más Chistes en la APP', "titulo", 'http://www.cronpixel.com/webapp/wp-content/uploads/2019/01/header-app.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
+        window.plugins.socialsharing.share(shr_mensaje+' - Más Chistes en la APP', shr_titulo, null, 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
     }
     var stage = 'home';
 
@@ -296,6 +300,10 @@
                         rchiste = rchiste.replace('##Chiste##',json[i].content);
                         rchiste = rchiste.replace('##Titulo##',json[i].title);
                         rchiste = rchiste.replace('##Chiste##',json[i].content);
+
+                        shr_titulo = json[i].title;
+                        shr_mensaje = json[i].content;
+
                         if(json[i].image!=""){
                             $('#chiste-show-img').html('<img src="'+json[i].image+'" class="img-responsive">');
                         }else{
