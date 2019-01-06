@@ -115,40 +115,6 @@
         var shr_titulo = "";
         var shr_mensaje = "";
 
-    function fbShare(){
-        window.plugins.socialsharing.shareViaFacebook(
-            'Message via Facebook', 
-            null /* img */, 
-            null /* url */, 
-            null, 
-            function(errormsg){alert("Error: Cannot Share")}
-        );
-    };
-     
-    function whatsappShare(){
-        window.plugins.socialsharing.shareViaWhatsApp(
-            'Message via WhatsApp',
-            null /* img */,
-            "https://pointdeveloper.com/" /* url */, 
-            null, 
-            function(errormsg){alert("Error: Cannot Share")}
-        );
-    };
-     
-    function twitterShare(){
-        window.plugins.socialsharing.shareViaTwitter(
-            'Message via Twitter',
-             null /* img */, 
-             'http://twitter.com/', 
-             null, 
-             function(errormsg){alert("Error: Cannot Share")}
-        );
-      };
-     
-    function otherShare(){
-        window.plugins.socialsharing.share('General share Message', null, null, null);
-    };
-
     function btnCompartir(){
         //window.plugins.socialsharing.share(mensaje+' - Más Chistes en la APP', titulo, 'http://www.cronpixel.com/webapp/wp-content/uploads/2019/01/header-app.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
         window.plugins.socialsharing.share(shr_mensaje+' - Más Chistes en la APP', shr_titulo, null, 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
