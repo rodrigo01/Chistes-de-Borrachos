@@ -92,7 +92,7 @@
     </div>
 
     <div id="chiste-show-tpl" style="display: none;">
-        <span class="chiste-tools" style="text-align: right;"><a href="#" onclick="otherShare();">Compartir</a></span>
+        <span class="chiste-tools" style="text-align: right;"><a href="#" onclick="window.plugins.socialsharing.share('##Chiste## - Más Chistes en la App', '##Titulo##', 'https://www.google.nl/images/srpr/logo4w.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos')"><img src="img/share-wt.png"> Compartir</a></span>
         <span id="chiste-show-img"></span>
         <span class="chiste-show-title">##Titulo##</span>
         <div class="chiste-show-content">##Chiste##</div>
@@ -287,6 +287,8 @@
                         
                     for(var i=0;i<json.length;i++){
                         rchiste = chiste_tpl;
+                        rchiste = rchiste.replace('##Titulo##',json[i].title);
+                        rchiste = rchiste.replace('##Chiste##',json[i].content);
                         rchiste = rchiste.replace('##Titulo##',json[i].title);
                         rchiste = rchiste.replace('##Chiste##',json[i].content);
                         if(json[i].image!=""){

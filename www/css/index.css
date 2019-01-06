@@ -106,3 +106,11 @@ Custom Colors
     color: #FFF;
     border: 1px solid #8db49c;
 }
+
+.chiste-tools a{
+    color: #FFF;
+}
+
+.chiste-tools img{
+    height: 20px;
+}
