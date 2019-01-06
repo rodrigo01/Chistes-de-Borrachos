@@ -301,8 +301,13 @@
                         rchiste = rchiste.replace('##Titulo##',json[i].title);
                         rchiste = rchiste.replace('##Chiste##',json[i].content);
 
+                        var html = json[i].content;
+                        var div = document.createElement("div");
+                        div.innerHTML = html;
+                        var text_mensaje = div.textContent || div.innerText || "";
+
                         shr_titulo = json[i].title;
-                        shr_mensaje = json[i].content;
+                        shr_mensaje = text_mensaje;
 
                         if(json[i].image!=""){
                             $('#chiste-show-img').html('<img src="'+json[i].image+'" class="img-responsive">');
