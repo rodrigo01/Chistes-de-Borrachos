@@ -92,7 +92,7 @@
     </div>
 
     <div id="chiste-show-tpl" style="display: none;">
-        <span class="chiste-tools" style="text-align: right;"><a href="#" onclick="btnCompartir('##Chiste##','##Titulo##');"><img src="img/share-wt.png"> Compartir</a></span>
+        <span class="chiste-tools" style="text-align: right;"><a href="#" onclick="btnCompartir();"><img src="img/share-wt.png"> Compartir</a></span>
         <span id="chiste-show-img"></span>
         <span class="chiste-show-title">##Titulo##</span>
         <div class="chiste-show-content">##Chiste##</div>
@@ -145,9 +145,9 @@
         window.plugins.socialsharing.share('General share Message', null, null, null);
     };
 
-    function btnCompartir(mensaje,titulo){
+    function btnCompartir(){
         //window.plugins.socialsharing.share(mensaje+' - Más Chistes en la APP', titulo, 'http://www.cronpixel.com/webapp/wp-content/uploads/2019/01/header-app.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
-        window.plugins.socialsharing.share(' - Más Chistes en la APP', "titulo", null, null);
+        window.plugins.socialsharing.share(' - Más Chistes en la APP', "titulo", 'http://www.cronpixel.com/webapp/wp-content/uploads/2019/01/header-app.png', 'https://play.google.com/store/apps/details?id=com.cronpixel.chistesborrachos');
     }
     var stage = 'home';
 
